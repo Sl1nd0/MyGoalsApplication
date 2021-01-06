@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<div>
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.5/css/fork-awesome.min.css" 
+  integrity="sha256-P64qV9gULPHiZTdrS1nM59toStkgjM0dsf5mK/UwBV4=" crossorigin="anonymous">
+
+<style type="text/css">
+
+  #left1 {
+   text-align: left;
+   color: white;
+   background-image: url("./assets/img/backgrounds/1.jpg");
+ }
+ 
+</style>
+
+</head>
+
+<body id = "left1">
+
+    <div class = "container" >
+    <form action="/home" width = "50%" method = "POST"> 
+            <br><br>
+            <div class="form-group">
+              <label for="name">name</label>
+              <input type="text" class="form-control" name = "nam1" id="name" style="font-size: 18pt; height: 35px; width:250px;" required> 
+            </div>
+            <div class="form-group">
+                    <label for="Surname">Surname</label>
+                    <input type="text" class="form-control" name = "sur1" id="sur" style="font-size: 18pt; height: 35px; width:250px;" required>
+            </div>
+            <div class="form-group">
+                    <label for="bdate"> Birth Date </label>
+                    <input type="date" class="form-control" name = "bdate" id="bdate1" style="font-size: 18pt; height: 35px; width:250px;" required>
+              </div>
+            <div class="form-group">
+                    <label for="email"> Email </label>
+                    <input type="email" class="form-control" name = "email" id="email1" style="font-size: 18pt; height: 35px; width:250px;" required>
+            </div>
+            <div class="form-group">
+            <label for="number"> Number </label>
+              <input type="tel" class="form-control" name = "number" id="num1" style="font-size: 18pt; height: 35px; width:250px;"
+               pattern="[0-9]{3}[0-9]{3}[0-9]{4}"required> 
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password</label>
+              <input type="password" class="form-control" name = "pas1" id="pwd" style="font-size: 18pt; height: 35px; width:250px;" required>
+            </div>
+            <div class="form-group">
+                    <label for="pwd2">Comfirm Password</label>
+                    <input type="password" class="form-control" name = "pas2" id="pwd2" style="font-size: 18pt; height: 35px; width:250px;" required>
+              </div>
+        
+            <button type="submit" class="btn btn-warning">Create</button>
+			<button type="submit" class="btn btn-warning">Cancel</button>
+          </form>
+        </div>
+</body>
+</div>
+
+</html>

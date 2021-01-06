@@ -1,0 +1,125 @@
+<div>
+  <header class="masthead">
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-lead-in">Welcome To Our Studio!</div>
+        <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Personal Goals -->
+  <section class="page-section" id="Goals1">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase"> Personal Goals </h2>
+          <h3 class="section-subheading text-muted"> Track of my own personal successes and desires <br> <br> 
+		  <a id = 'test' ng-click = "AddTextarea('p')" href="#!/post"> add goal </a> <br><br>
+			<div ng-show = "myVar">
+				<b> Goal Title </b> <input type = 'text' ng-model = "goaltitle" name = 'title'  size = '41'> <br> <br>
+				<b> Date  Entered </b> <input type="date" ng-model = "goaldate" name= 'bday' name = 'date1' style="width:354px"> <br> <br>
+				<textarea value='' ng-model = 'postdata' rows='10' cols='50'> </textarea> <br> <br> 
+				<button type='button' ng-click = "Postgoal('p')"class='btn btn-warning'>   Post  </button>
+				<button type='button' ng-click = "Cancel('p')"  class='btn btn-warning'> Cancel </button> <br><br>
+			</div>
+			
+		  </h3>
+        </div>
+      </div>
+
+	 <div class="row text-center">
+  
+       <!-- <div class="col-md-4" ng-bind-html="trustAsHtml(myHtmlVar)" > </div> -->
+       <div class="col-md-4" ng-repeat="picklist1 in picklists1"> 
+       <!-- <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-book fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Web Security</h4>
+          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+        </div> -->
+        <span class='fa-stack fa-4x'>
+          <i class= 'fas fa-circle fa-stack-2x text-primary'></i>
+          <i class='fas fa-book fa-stack-1x fa-inverse'></i>
+          </span>
+          <h4 class='service-heading'> {{picklist1.goal}}
+          <h5> ========== {{picklist1.goalstatus}} 
+          ==========  </h5>
+          <p class='text-muted'> {{picklist1.goaldesc}}
+          <b> Set date and time {{picklist1.goaldate}}
+          </b> </p>
+          <button type='button' ng-click = 'meetGoal(picklist1)' class='btn btn-warning'
+          name = '{{picklist1.butmet}}'
+           id = '{{picklist1.butmet}}'>
+             Goal Met  </button>
+          <button type='button' ng-click =' removeGoal(picklist1)' class='btn btn-warning'
+          name = '{{picklist1.butremove}}'
+          id = '{{picklist1.butremove}}'
+          >
+           Remove Goal </button> <br><br>
+      </div>
+      </div>
+	  
+    </div>
+  </section>
+ 
+<section class="page-section" id="Workgoals">
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase"> Work Goals </h2>
+        <h3 class="section-subheading text-muted"> Track of my own personal successes and desires <br> <br> 
+    <a id = 'test' ng-click = "AddTextarea('w')" href="#!/post"> add goal </a> <br><br>
+    <div ng-show = "myVarw">
+      <b> Goal Title </b> <input type = 'text' ng-model = "goaltitlew" name = 'title'  size = '41'> <br> <br>
+      <b> Date  Entered </b> <input type="date" ng-model = "goaldatew" name= 'bday' name = 'date1' style="width:354px"> <br> <br>
+      <textarea value='' ng-model = 'postdataw' rows='10' cols='50'> </textarea> <br> <br> 
+      <button type='button' ng-click = "Postgoal('w')" class='btn btn-warning'>   Post  </button>
+      <button type='button' ng-click = "Cancel('w')"  class='btn btn-warning'> Cancel </button> <br><br>
+    </div>
+    
+    </h3>
+      </div>
+    </div>
+
+ <div class="row text-center">
+
+     <!-- <div class="col-md-4" ng-bind-html="trustAsHtml(myHtmlVar)" > </div> -->
+     <div class="col-md-4" ng-repeat="picklist2 in picklists2"> 
+       <!-- <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-book fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Web Security</h4>
+          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+        </div> -->
+        <span class='fa-stack fa-4x'>
+          <i class= 'fas fa-circle fa-stack-2x text-primary'></i>
+          <i class='fas fa-book fa-stack-1x fa-inverse'></i>
+          </span>
+          <h4 class='service-heading'> {{picklist2.wgoal}}
+          <h5> ========== {{picklist2.wgoalstatus}} 
+          ==========  </h5>
+          <p class='text-muted'> {{picklist2.wgoaldesc}}
+          <b> Set date and time {{picklist2.wgoaldate}}
+          </b> </p>
+          <button type='button' ng-click = 'meetGoalWork(picklist2)' class='btn btn-warning'
+          name = '{{picklist2.wbutmet}}'
+           id = '{{picklist2.wbutmet}}'>
+             Goal Met  </button>
+          <button type='button' ng-click =' removeGoalW(picklist2)' class='btn btn-warning'
+          name = '{{picklist2.wbutremove}}'
+          id = '{{picklist2.wbutremove}}'
+          >
+           Remove Goal </button> <br><br>
+      </div>
+      </div>
+
+</div>
+</section>
+</div>

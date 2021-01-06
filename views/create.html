@@ -1,0 +1,38 @@
+
+    <div class = "container" align = "left">
+	<h3> Create account for Personal Planner </h3>
+ 
+            <div class="form-group">
+              <label for="name">name</label>
+              <input type="text" class="form-control" name = "nam1" id="name" ng-model="name" style="font-size: 18pt; height: 35px; width:250px;" required> 
+            </div>
+            <div class="form-group">
+                    <label for="Surname">Surname</label>
+                    <input type="text" class="form-control" name = "sur1" id="sur" ng-model = "surname" style="font-size: 18pt; height: 35px; width:250px;" required>
+            </div>
+            <div class="form-group">
+                    <label for="bdate"> Birth Date </label>
+                    <input type="date" class="form-control" name = "bdate" id="bdate1" ng-model = "birthdate" style="font-size: 18pt; height: 35px; width:250px;" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required>
+              </div>
+            <div class="form-group">
+                    <label for="email"> Email </label>
+                    <input type="email" class="form-control" name = "email" id="email1" ng-model = "email" style="font-size: 18pt; height: 35px; width:250px;" required>
+            </div>
+            <div class="form-group">
+            <label for="number"> Number </label>
+              <input type="tel" class="form-control" name = "number" id="num1" ng-model = "number" style="font-size: 18pt; height: 35px; width:250px;"
+               pattern="[0-9]{3}[0-9]{3}[0-9]{4}"required> 
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password</label>
+              <input type="password" class="form-control" name = "pas1" id="pwd" ng-model = "password" style="font-size: 18pt; height: 35px; width:250px;" required>
+            </div>
+            <div class="form-group">
+                    <label for="pwd2">Comfirm Password</label>
+                    <input type="password" class="form-control" name = "pas2" id="pwd2" ng-model = "password2" style="font-size: 18pt; height: 35px; width:250px;" required>
+              </div>
+        
+            <button type="button" ng-click = "Create()" class="btn btn-primary"> Create </button>
+            <button type="button" ng-click = "Back()" class="btn btn-primary"> cancel </button>
+
+        </div>
